@@ -37,3 +37,27 @@
 2021-06-11 21:30:33.700 +03:00 [INF] Executed action EmployeeDirectory.Controllers.WeatherForecastController.Get (EmployeeDirectory) in 27.3985ms
 2021-06-11 21:30:33.701 +03:00 [INF] Executed endpoint 'EmployeeDirectory.Controllers.WeatherForecastController.Get (EmployeeDirectory)'
 2021-06-11 21:30:33.702 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44309/WeatherForecast - - - 200 - application/json;+charset=utf-8 102.1743ms
+2021-06-11 22:25:05.884 +03:00 [INF] Application Is Starting
+2021-06-11 22:25:06.860 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-06-11 22:25:06.869 +03:00 [INF] Hosting environment: Development
+2021-06-11 22:25:06.870 +03:00 [INF] Content root path: E:\01 DEV\Practice\EmployeeDirectory
+2021-06-11 22:25:06.884 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44309/swagger/index.html - -
+2021-06-11 22:25:07.038 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44309/swagger/index.html - - - 200 - text/html;charset=utf-8 157.2199ms
+2021-06-11 22:25:07.144 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44309/swagger/swagger-ui-standalone-preset.js - -
+2021-06-11 22:25:07.144 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44309/swagger/swagger-ui.css - -
+2021-06-11 22:25:07.171 +03:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2021-06-11 22:25:07.171 +03:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2021-06-11 22:25:07.172 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44309/swagger/swagger-ui.css - - - 0 142933 text/css 29.7548ms
+2021-06-11 22:25:07.172 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44309/swagger/swagger-ui-standalone-preset.js - - - 0 311804 application/javascript 29.7541ms
+2021-06-11 22:25:07.363 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44309/swagger/favicon-16x16.png - -
+2021-06-11 22:25:07.365 +03:00 [INF] Sending file. Request path: '/favicon-16x16.png'. Physical path: 'N/A'
+2021-06-11 22:25:07.365 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44309/swagger/favicon-16x16.png - - - 0 665 image/png 2.4274ms
+2021-06-11 22:25:07.458 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44309/swagger/v1/swagger.json - -
+2021-06-11 22:25:07.556 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44309/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 97.8482ms
+2021-06-11 22:25:23.935 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44309/WeatherForecast - -
+2021-06-11 22:25:23.969 +03:00 [INF] Executing endpoint 'EmployeeDirectory.Controllers.WeatherForecastController.Get (EmployeeDirectory)'
+2021-06-11 22:25:23.991 +03:00 [INF] Route matched with {action = "Get", controller = "WeatherForecast"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[EmployeeDirectory.WeatherForecast] Get() on controller EmployeeDirectory.Controllers.WeatherForecastController (EmployeeDirectory).
+2021-06-11 22:25:23.998 +03:00 [INF] Executing ObjectResult, writing value of type 'EmployeeDirectory.WeatherForecast[]'.
+2021-06-11 22:25:24.019 +03:00 [INF] Executed action EmployeeDirectory.Controllers.WeatherForecastController.Get (EmployeeDirectory) in 21.9443ms
+2021-06-11 22:25:24.021 +03:00 [INF] Executed endpoint 'EmployeeDirectory.Controllers.WeatherForecastController.Get (EmployeeDirectory)'
+2021-06-11 22:25:24.021 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44309/WeatherForecast - - - 200 - application/json;+charset=utf-8 85.8154ms
