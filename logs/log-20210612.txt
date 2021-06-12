@@ -1,0 +1,11 @@
+2021-06-12 08:28:09.707 +03:00 [INF] Application Is Starting
+2021-06-12 08:28:11.035 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-06-12 08:28:11.045 +03:00 [INF] Hosting environment: Development
+2021-06-12 08:28:11.046 +03:00 [INF] Content root path: E:\01 DEV\Practice\EmployeeDirectory
+2021-06-12 08:28:11.069 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44309/swagger/index.html - -
+2021-06-12 08:28:11.233 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44309/swagger/index.html - - - 200 - text/html;charset=utf-8 167.1771ms
+2021-06-12 08:28:11.539 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44309/swagger/favicon-16x16.png - -
+2021-06-12 08:28:11.606 +03:00 [INF] Sending file. Request path: '/favicon-16x16.png'. Physical path: 'N/A'
+2021-06-12 08:28:11.607 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44309/swagger/favicon-16x16.png - - - 0 665 image/png 68.1472ms
+2021-06-12 08:28:11.711 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44309/swagger/v1/swagger.json - -
+2021-06-12 08:28:11.823 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44309/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 111.9893ms
