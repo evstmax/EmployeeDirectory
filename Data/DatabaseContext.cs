@@ -20,7 +20,7 @@ namespace EmployeeDirectory.Data
                 new Department
                 {
                     Id = 1,
-                    Name = "Бугалтерия"
+                    Name = "Бухгалтерия"
                 },
 
             new Department

@@ -4,6 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using EmployeeDirectory.Configurations;
 using EmployeeDirectory.Data;
+using EmployeeDirectory.IRepository;
+using EmployeeDirectory.Repository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -43,6 +45,7 @@ namespace EmployeeDirectory
             });
 
             services.AddAutoMapper(typeof(MapperInitializer));
+            services.AddTransient<IUnitOfWork, UnitOfWork>(); //при каждом обращении к сервису создаетс€ новый объект сервиса. ¬ течение одного запроса может быть несколько обращений к сервису, соответственно при каждом обращении будет создаватьс€ новый объект. ѕодобна€ модель жизненного цикла наиболее подходит дл€ легковесных сервисов, которые не хран€т данных о состо€нии
 
             services.AddSwaggerGen(c =>
             {
