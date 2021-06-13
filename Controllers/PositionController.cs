@@ -42,5 +42,23 @@ namespace EmployeeDirectory.Controllers
                 return StatusCode(500, "Internal Server Error. Please Try Again Later");
             }
         }
+
+
+        [HttpGet("{id:int}")]
+        public async Task<IActionResult> GetPosition(int id)
+        {
+            try
+            {
+                var position = await _unitOfWork.Positions.Get(q => q.Id == id, new List<string> {"Employees"});
+                var result = _mapper.Map<PositionDTO>(position);
+                return Ok(result);
+            }
+            catch (Exception e)
+            {
+                _logger.LogError(e, $"Something Went Wrong in the {nameof(GetPosition)}");
+                return StatusCode(500, "Internal Server Error. Please Try Again Later");
+            }
+
+        }
     }
 }

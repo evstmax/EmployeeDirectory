@@ -52,6 +52,11 @@ namespace EmployeeDirectory
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "EmployeeDirectory", Version = "v1" });
             });
 
+            services.AddControllersWithViews()
+                .AddNewtonsoftJson(options =>
+                    options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
+                );
+
             services.AddControllers();
 
         }

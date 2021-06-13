@@ -13,52 +13,54 @@ namespace EmployeeDirectory.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class DepartmentController : ControllerBase
+    public class EmployeeController : ControllerBase
     {
         private readonly IUnitOfWork _unitOfWork;
-        private readonly ILogger<DepartmentController> _logger;
+        private readonly ILogger<EmployeeController> _logger;
         private readonly IMapper _mapper;
 
 
-        public DepartmentController(IUnitOfWork unitOfWork, ILogger<DepartmentController> logger, IMapper mapper)
+        public EmployeeController(IUnitOfWork unitOfWork, ILogger<EmployeeController> logger, IMapper mapper)
         {
             _unitOfWork = unitOfWork;
             _logger = logger;
             _mapper = mapper;
         }
-
         [HttpGet]
-        public async Task<IActionResult> GetDepartment()
+        public async Task<IActionResult> GetEmployee()
         {
             try
             {
-                var departments = await _unitOfWork.Departments.GetAll();
-                var results = _mapper.Map<IList<DepartmentDTO>>(departments);
+                var employees = await _unitOfWork.Employees.GetAll();
+                var results = _mapper.Map<IList<EmployeeDTO>>(employees);
                 return Ok(results);
             }
             catch (Exception e)
             {
-                _logger.LogError(e, $"Something Went Wrong in the {nameof(GetDepartment)}");
+                _logger.LogError(e, $"Something Went Wrong in the {nameof(GetEmployee)}");
                 return StatusCode(500, "Internal Server Error. Please Try Again Later");
             }
         }
 
 
         [HttpGet("{id:int}")]
-        public async Task<IActionResult> GetDepartment(int id)
+        public async Task<IActionResult> GetEmployee(int id)
         {
             try
             {
-                var department = await _unitOfWork.Departments.Get(q=> q.Id == id, new List<string> { "Employees" });
-                var result = _mapper.Map<DepartmentDTO>(department);
+                var employee = await _unitOfWork.Employees.Get(q => q.Id == id, new List<string> { "Position", "Department"});
+                var result = _mapper.Map<EmployeeDTO>(employee);
                 return Ok(result);
             }
             catch (Exception e)
             {
-                _logger.LogError(e, $"Something Went Wrong in the {nameof(GetDepartment)}");
+                _logger.LogError(e, $"Something Went Wrong in the {nameof(GetEmployee)}");
                 return StatusCode(500, "Internal Server Error. Please Try Again Later");
             }
         }
+
+
+
 
     }
 }
