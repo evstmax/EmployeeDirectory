@@ -46,6 +46,7 @@ namespace EmployeeDirectory.Controllers
         }
 
 
+
         [HttpGet("{id:int}", Name = "GetEmployee")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
@@ -63,10 +64,6 @@ namespace EmployeeDirectory.Controllers
                 return StatusCode(500, "Internal Server Error. Please Try Again Later");
             }
         }
-
-
-
-
 
 
         [HttpPost]
@@ -95,16 +92,34 @@ namespace EmployeeDirectory.Controllers
                 _logger.LogError(e, $"Something Went Wrong in the {nameof(CreateEmployee)}");
                 return StatusCode(500, "Internal Server Error. Please Try Again Later");
             }
-
-
-            //var employee = _mapper.Map<Employee>(employeeDTO);
-            //await _unitOfWork.Employees.Insert(employee);
-            //await _unitOfWork.Save();
-
-            //return CreatedAtRoute("GetEmployee", new { id = employee.Id }, employee);
         }
 
 
+        [HttpDelete("{id:int}")]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        public async Task<IActionResult> DeleteEmployee(int id)
+        {
+            if (id < 1)
+            {
+                _logger.LogError($"Invalid DELETE attempt in {nameof(DeleteEmployee)}");
+                return BadRequest();
+            }
+
+            var employee = await _unitOfWork.Employees.Get(q => q.Id == id);
+            if (employee == null)
+            {
+                _logger.LogError($"Invalid DELETE attempt in {nameof(DeleteEmployee)}");
+                return BadRequest("Submitted data is invalid");
+            }
+
+            await _unitOfWork.Employees.Delete(id);
+            await _unitOfWork.Save();
+
+            return NoContent();
+
+        }
 
     }
 }
