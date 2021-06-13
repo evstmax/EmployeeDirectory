@@ -2201,3 +2201,365 @@ WHERE [e].[Id] = @__id_0
 2021-06-13 11:47:37.561 +03:00 [INF] Executed action EmployeeDirectory.Controllers.EmployeeController.GetEmployee (EmployeeDirectory) in 2448.6055ms
 2021-06-13 11:47:37.562 +03:00 [INF] Executed endpoint 'EmployeeDirectory.Controllers.EmployeeController.GetEmployee (EmployeeDirectory)'
 2021-06-13 11:47:37.568 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44309/api/Employee/1 - - - 200 403 application/json;+charset=utf-8 2563.6822ms
+2021-06-13 12:59:10.368 +03:00 [INF] Application Is Starting
+2021-06-13 12:59:11.284 +03:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-06-13 12:59:11.604 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-06-13 12:59:11.604 +03:00 [INF] Hosting environment: Development
+2021-06-13 12:59:11.604 +03:00 [INF] Content root path: E:\01 DEV\Practice\EmployeeDirectory
+2021-06-13 12:59:11.653 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44309/swagger/index.html - -
+2021-06-13 12:59:11.813 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44309/swagger/index.html - - - 200 - text/html;charset=utf-8 162.0982ms
+2021-06-13 12:59:12.749 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44309/swagger/swagger-ui.css - -
+2021-06-13 12:59:12.796 +03:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2021-06-13 12:59:12.796 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44309/swagger/swagger-ui.css - - - 0 142933 text/css 47.5664ms
+2021-06-13 12:59:13.114 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44309/swagger/v1/swagger.json - -
+2021-06-13 12:59:13.210 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44309/swagger/favicon-16x16.png - -
+2021-06-13 12:59:13.211 +03:00 [INF] Sending file. Request path: '/favicon-16x16.png'. Physical path: 'N/A'
+2021-06-13 12:59:13.211 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44309/swagger/favicon-16x16.png - - - 0 665 image/png 1.6768ms
+2021-06-13 12:59:13.242 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44309/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 128.5786ms
+2021-06-13 12:59:23.548 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44309/api/Department - -
+2021-06-13 12:59:23.590 +03:00 [INF] Executing endpoint 'EmployeeDirectory.Controllers.DepartmentController.GetDepartment (EmployeeDirectory)'
+2021-06-13 12:59:23.628 +03:00 [INF] Route matched with {action = "GetDepartment", controller = "Department"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetDepartment() on controller EmployeeDirectory.Controllers.DepartmentController (EmployeeDirectory).
+2021-06-13 12:59:24.783 +03:00 [WRN] No type was specified for the decimal property 'Salary' on entity type 'Position'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType()', specify precision and scale using 'HasPrecision()' or configure a value converter using 'HasConversion()'.
+2021-06-13 12:59:24.925 +03:00 [INF] Entity Framework Core 5.0.7 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-06-13 12:59:25.650 +03:00 [INF] Executed DbCommand (48ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [d].[Id], [d].[Name]
+FROM [Departments] AS [d]
+2021-06-13 12:59:25.732 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[EmployeeDirectory.Models.DepartmentDTO, EmployeeDirectory, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-06-13 12:59:25.892 +03:00 [INF] Executed action EmployeeDirectory.Controllers.DepartmentController.GetDepartment (EmployeeDirectory) in 2258.5525ms
+2021-06-13 12:59:25.893 +03:00 [INF] Executed endpoint 'EmployeeDirectory.Controllers.DepartmentController.GetDepartment (EmployeeDirectory)'
+2021-06-13 12:59:25.900 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44309/api/Department - - - 200 161 application/json;+charset=utf-8 2352.1200ms
+2021-06-13 12:59:41.364 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44309/api/Department/3 - -
+2021-06-13 12:59:41.366 +03:00 [INF] Executing endpoint 'EmployeeDirectory.Controllers.DepartmentController.GetDepartment (EmployeeDirectory)'
+2021-06-13 12:59:41.382 +03:00 [INF] Route matched with {action = "GetDepartment", controller = "Department"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetDepartment(Int32) on controller EmployeeDirectory.Controllers.DepartmentController (EmployeeDirectory).
+2021-06-13 12:59:41.433 +03:00 [INF] Entity Framework Core 5.0.7 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-06-13 12:59:41.687 +03:00 [INF] Executed DbCommand (30ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Name], [e].[Id], [e].[BirthDate], [e].[DepartmentId], [e].[Email], [e].[EmploymentDate], [e].[FirstName], [e].[LastName], [e].[Patronymic], [e].[Phone], [e].[PositionId]
+FROM (
+    SELECT TOP(1) [d].[Id], [d].[Name]
+    FROM [Departments] AS [d]
+    WHERE [d].[Id] = @__id_0
+) AS [t]
+LEFT JOIN [Employees] AS [e] ON [t].[Id] = [e].[DepartmentId]
+ORDER BY [t].[Id], [e].[Id]
+2021-06-13 12:59:41.735 +03:00 [INF] Executing OkObjectResult, writing value of type 'EmployeeDirectory.Models.DepartmentDTO'.
+2021-06-13 12:59:41.744 +03:00 [INF] Executed action EmployeeDirectory.Controllers.DepartmentController.GetDepartment (EmployeeDirectory) in 362.4651ms
+2021-06-13 12:59:41.744 +03:00 [INF] Executed endpoint 'EmployeeDirectory.Controllers.DepartmentController.GetDepartment (EmployeeDirectory)'
+2021-06-13 12:59:41.745 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44309/api/Department/3 - - - 200 330 application/json;+charset=utf-8 381.2205ms
+2021-06-13 13:00:13.542 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44309/api/Employee - -
+2021-06-13 13:00:13.546 +03:00 [INF] Executing endpoint 'EmployeeDirectory.Controllers.EmployeeController.GetEmployee (EmployeeDirectory)'
+2021-06-13 13:00:13.549 +03:00 [INF] Route matched with {action = "GetEmployee", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetEmployee() on controller EmployeeDirectory.Controllers.EmployeeController (EmployeeDirectory).
+2021-06-13 13:00:13.563 +03:00 [INF] Entity Framework Core 5.0.7 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-06-13 13:00:13.574 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[BirthDate], [e].[DepartmentId], [e].[Email], [e].[EmploymentDate], [e].[FirstName], [e].[LastName], [e].[Patronymic], [e].[Phone], [e].[PositionId]
+FROM [Employees] AS [e]
+2021-06-13 13:00:13.605 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[EmployeeDirectory.Models.EmployeeDTO, EmployeeDirectory, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-06-13 13:00:13.606 +03:00 [INF] Executed action EmployeeDirectory.Controllers.EmployeeController.GetEmployee (EmployeeDirectory) in 56.6145ms
+2021-06-13 13:00:13.606 +03:00 [INF] Executed endpoint 'EmployeeDirectory.Controllers.EmployeeController.GetEmployee (EmployeeDirectory)'
+2021-06-13 13:00:13.610 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44309/api/Employee - - - 200 593 application/json;+charset=utf-8 65.9785ms
+2021-06-13 13:00:22.752 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44309/api/Employee/1 - -
+2021-06-13 13:00:22.753 +03:00 [INF] Executing endpoint 'EmployeeDirectory.Controllers.EmployeeController.GetEmployee (EmployeeDirectory)'
+2021-06-13 13:00:22.757 +03:00 [INF] Route matched with {action = "GetEmployee", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetEmployee(Int32) on controller EmployeeDirectory.Controllers.EmployeeController (EmployeeDirectory).
+2021-06-13 13:00:22.760 +03:00 [INF] Entity Framework Core 5.0.7 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-06-13 13:00:22.790 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[BirthDate], [e].[DepartmentId], [e].[Email], [e].[EmploymentDate], [e].[FirstName], [e].[LastName], [e].[Patronymic], [e].[Phone], [e].[PositionId], [p].[Id], [p].[Name], [p].[Salary], [d].[Id], [d].[Name]
+FROM [Employees] AS [e]
+INNER JOIN [Positions] AS [p] ON [e].[PositionId] = [p].[Id]
+INNER JOIN [Departments] AS [d] ON [e].[DepartmentId] = [d].[Id]
+WHERE [e].[Id] = @__id_0
+2021-06-13 13:00:22.799 +03:00 [INF] Executing OkObjectResult, writing value of type 'EmployeeDirectory.Models.EmployeeDTO'.
+2021-06-13 13:00:22.802 +03:00 [INF] Executed action EmployeeDirectory.Controllers.EmployeeController.GetEmployee (EmployeeDirectory) in 45.1178ms
+2021-06-13 13:00:22.802 +03:00 [INF] Executed endpoint 'EmployeeDirectory.Controllers.EmployeeController.GetEmployee (EmployeeDirectory)'
+2021-06-13 13:00:22.802 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44309/api/Employee/1 - - - 200 403 application/json;+charset=utf-8 49.7535ms
+2021-06-13 13:00:38.065 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44309/api/Position - -
+2021-06-13 13:00:38.065 +03:00 [INF] Executing endpoint 'EmployeeDirectory.Controllers.PositionController.GetPosition (EmployeeDirectory)'
+2021-06-13 13:00:38.068 +03:00 [INF] Route matched with {action = "GetPosition", controller = "Position"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPosition() on controller EmployeeDirectory.Controllers.PositionController (EmployeeDirectory).
+2021-06-13 13:00:38.071 +03:00 [INF] Entity Framework Core 5.0.7 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-06-13 13:00:38.076 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Name], [p].[Salary]
+FROM [Positions] AS [p]
+2021-06-13 13:00:38.093 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[EmployeeDirectory.Models.PositionDTO, EmployeeDirectory, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-06-13 13:00:38.094 +03:00 [INF] Executed action EmployeeDirectory.Controllers.PositionController.GetPosition (EmployeeDirectory) in 25.5687ms
+2021-06-13 13:00:38.094 +03:00 [INF] Executed endpoint 'EmployeeDirectory.Controllers.PositionController.GetPosition (EmployeeDirectory)'
+2021-06-13 13:00:38.094 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44309/api/Position - - - 200 205 application/json;+charset=utf-8 29.8565ms
+2021-06-13 13:00:52.711 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44309/api/Position/3 - -
+2021-06-13 13:00:52.711 +03:00 [INF] Executing endpoint 'EmployeeDirectory.Controllers.PositionController.GetPosition (EmployeeDirectory)'
+2021-06-13 13:00:52.715 +03:00 [INF] Route matched with {action = "GetPosition", controller = "Position"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPosition(Int32) on controller EmployeeDirectory.Controllers.PositionController (EmployeeDirectory).
+2021-06-13 13:00:52.717 +03:00 [INF] Entity Framework Core 5.0.7 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-06-13 13:00:52.737 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Name], [t].[Salary], [e].[Id], [e].[BirthDate], [e].[DepartmentId], [e].[Email], [e].[EmploymentDate], [e].[FirstName], [e].[LastName], [e].[Patronymic], [e].[Phone], [e].[PositionId]
+FROM (
+    SELECT TOP(1) [p].[Id], [p].[Name], [p].[Salary]
+    FROM [Positions] AS [p]
+    WHERE [p].[Id] = @__id_0
+) AS [t]
+LEFT JOIN [Employees] AS [e] ON [t].[Id] = [e].[PositionId]
+ORDER BY [t].[Id], [e].[Id]
+2021-06-13 13:00:52.766 +03:00 [INF] Executing OkObjectResult, writing value of type 'EmployeeDirectory.Models.PositionDTO'.
+2021-06-13 13:00:52.767 +03:00 [INF] Executed action EmployeeDirectory.Controllers.PositionController.GetPosition (EmployeeDirectory) in 51.5856ms
+2021-06-13 13:00:52.767 +03:00 [INF] Executed endpoint 'EmployeeDirectory.Controllers.PositionController.GetPosition (EmployeeDirectory)'
+2021-06-13 13:00:52.767 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44309/api/Position/3 - - - 200 69 application/json;+charset=utf-8 55.8864ms
+2021-06-13 13:01:21.273 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44309/api/Position/2 - -
+2021-06-13 13:01:21.274 +03:00 [INF] Executing endpoint 'EmployeeDirectory.Controllers.PositionController.GetPosition (EmployeeDirectory)'
+2021-06-13 13:01:21.296 +03:00 [INF] Route matched with {action = "GetPosition", controller = "Position"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPosition(Int32) on controller EmployeeDirectory.Controllers.PositionController (EmployeeDirectory).
+2021-06-13 13:01:21.297 +03:00 [INF] Entity Framework Core 5.0.7 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-06-13 13:01:21.307 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Name], [t].[Salary], [e].[Id], [e].[BirthDate], [e].[DepartmentId], [e].[Email], [e].[EmploymentDate], [e].[FirstName], [e].[LastName], [e].[Patronymic], [e].[Phone], [e].[PositionId]
+FROM (
+    SELECT TOP(1) [p].[Id], [p].[Name], [p].[Salary]
+    FROM [Positions] AS [p]
+    WHERE [p].[Id] = @__id_0
+) AS [t]
+LEFT JOIN [Employees] AS [e] ON [t].[Id] = [e].[PositionId]
+ORDER BY [t].[Id], [e].[Id]
+2021-06-13 13:01:21.313 +03:00 [INF] Executing OkObjectResult, writing value of type 'EmployeeDirectory.Models.PositionDTO'.
+2021-06-13 13:01:21.317 +03:00 [INF] Executed action EmployeeDirectory.Controllers.PositionController.GetPosition (EmployeeDirectory) in 20.6412ms
+2021-06-13 13:01:21.317 +03:00 [INF] Executed endpoint 'EmployeeDirectory.Controllers.PositionController.GetPosition (EmployeeDirectory)'
+2021-06-13 13:01:21.318 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44309/api/Position/2 - - - 200 351 application/json;+charset=utf-8 44.9465ms
+2021-06-13 13:07:42.556 +03:00 [INF] Application Is Starting
+2021-06-13 13:07:43.469 +03:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-06-13 13:07:43.804 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-06-13 13:07:43.804 +03:00 [INF] Hosting environment: Development
+2021-06-13 13:07:43.804 +03:00 [INF] Content root path: E:\01 DEV\Practice\EmployeeDirectory
+2021-06-13 13:07:43.854 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44309/swagger/index.html - -
+2021-06-13 13:07:44.021 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44309/swagger/index.html - - - 200 - text/html;charset=utf-8 169.4713ms
+2021-06-13 13:07:45.018 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44309/swagger/swagger-ui.css - -
+2021-06-13 13:07:45.058 +03:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2021-06-13 13:07:45.059 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44309/swagger/swagger-ui.css - - - 0 142933 text/css 40.3497ms
+2021-06-13 13:07:45.300 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44309/swagger/v1/swagger.json - -
+2021-06-13 13:07:45.377 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44309/swagger/favicon-16x16.png - -
+2021-06-13 13:07:45.382 +03:00 [INF] Sending file. Request path: '/favicon-16x16.png'. Physical path: 'N/A'
+2021-06-13 13:07:45.382 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44309/swagger/favicon-16x16.png - - - 0 665 image/png 5.7690ms
+2021-06-13 13:07:45.442 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44309/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 142.6381ms
+2021-06-13 13:11:42.617 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44309/api/Employee application/json-patch+json 222
+2021-06-13 13:11:42.623 +03:00 [INF] CORS policy execution successful.
+2021-06-13 13:11:42.672 +03:00 [INF] Executing endpoint 'EmployeeDirectory.Controllers.EmployeeController.CreateEmployee (EmployeeDirectory)'
+2021-06-13 13:11:42.722 +03:00 [INF] Route matched with {action = "CreateEmployee", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateEmployee(EmployeeDirectory.Models.CreateEmployeeDTO) on controller EmployeeDirectory.Controllers.EmployeeController (EmployeeDirectory).
+2021-06-13 13:11:44.067 +03:00 [WRN] No type was specified for the decimal property 'Salary' on entity type 'Position'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType()', specify precision and scale using 'HasPrecision()' or configure a value converter using 'HasConversion()'.
+2021-06-13 13:11:44.206 +03:00 [INF] Entity Framework Core 5.0.7 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-06-13 13:11:44.929 +03:00 [INF] Executed DbCommand (67ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (DbType = DateTime2), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Employees] ([BirthDate], [DepartmentId], [Email], [EmploymentDate], [FirstName], [LastName], [Patronymic], [Phone], [PositionId])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8);
+SELECT [Id]
+FROM [Employees]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2021-06-13 13:11:45.049 +03:00 [INF] Executing CreatedAtRouteResult, writing value of type 'EmployeeDirectory.Data.Employee'.
+2021-06-13 13:11:45.082 +03:00 [INF] Executed action EmployeeDirectory.Controllers.EmployeeController.CreateEmployee (EmployeeDirectory) in 2353.5991ms
+2021-06-13 13:11:45.084 +03:00 [INF] Executed endpoint 'EmployeeDirectory.Controllers.EmployeeController.CreateEmployee (EmployeeDirectory)'
+2021-06-13 13:11:45.088 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: No route matches the supplied values.
+   at Microsoft.AspNetCore.Mvc.CreatedAtRouteResult.OnFormatting(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor.ExecuteAsyncCore(ActionContext context, ObjectResult result, Type objectType, Object value)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor.ExecuteAsync(ActionContext context, ObjectResult result)
+   at Microsoft.AspNetCore.Mvc.ObjectResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultAsync(IActionResult result)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeNextResultFilterAsync[TFilter,TFilterAsync]()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-06-13 13:11:45.133 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44309/api/Employee application/json-patch+json 222 - 500 - text/plain 2515.7744ms
+2021-06-13 14:14:21.419 +03:00 [INF] Application Is Starting
+2021-06-13 14:14:22.312 +03:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-06-13 14:14:22.643 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-06-13 14:14:22.643 +03:00 [INF] Hosting environment: Development
+2021-06-13 14:14:22.643 +03:00 [INF] Content root path: E:\01 DEV\Practice\EmployeeDirectory
+2021-06-13 14:14:22.692 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44309/swagger/index.html - -
+2021-06-13 14:14:22.864 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44309/swagger/index.html - - - 200 - text/html;charset=utf-8 174.0337ms
+2021-06-13 14:14:22.976 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44309/swagger/swagger-ui.css - -
+2021-06-13 14:14:22.998 +03:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2021-06-13 14:14:22.999 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44309/swagger/swagger-ui.css - - - 0 142933 text/css 22.7950ms
+2021-06-13 14:14:23.083 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44309/swagger/favicon-16x16.png - -
+2021-06-13 14:14:23.085 +03:00 [INF] Sending file. Request path: '/favicon-16x16.png'. Physical path: 'N/A'
+2021-06-13 14:14:23.085 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44309/swagger/favicon-16x16.png - - - 0 665 image/png 2.3913ms
+2021-06-13 14:14:23.155 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44309/swagger/v1/swagger.json - -
+2021-06-13 14:14:23.306 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44309/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 152.2658ms
+2021-06-13 14:14:34.477 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44309/api/Employee application/json-patch+json 195
+2021-06-13 14:14:34.482 +03:00 [INF] CORS policy execution successful.
+2021-06-13 14:14:34.528 +03:00 [INF] Executing endpoint 'EmployeeDirectory.Controllers.EmployeeController.CreateEmployee (EmployeeDirectory)'
+2021-06-13 14:14:34.579 +03:00 [INF] Route matched with {action = "CreateEmployee", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateEmployee(EmployeeDirectory.Models.CreateEmployeeDTO) on controller EmployeeDirectory.Controllers.EmployeeController (EmployeeDirectory).
+2021-06-13 14:14:35.152 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2021-06-13 14:14:35.240 +03:00 [INF] Executed action EmployeeDirectory.Controllers.EmployeeController.CreateEmployee (EmployeeDirectory) in 655.6679ms
+2021-06-13 14:14:35.242 +03:00 [INF] Executed endpoint 'EmployeeDirectory.Controllers.EmployeeController.CreateEmployee (EmployeeDirectory)'
+2021-06-13 14:14:35.244 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44309/api/Employee application/json-patch+json 195 - 400 235 application/problem+json;+charset=utf-8 767.3250ms
+2021-06-13 14:15:16.960 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44309/api/Employee application/json-patch+json 195
+2021-06-13 14:15:16.963 +03:00 [INF] CORS policy execution successful.
+2021-06-13 14:15:16.965 +03:00 [INF] Executing endpoint 'EmployeeDirectory.Controllers.EmployeeController.CreateEmployee (EmployeeDirectory)'
+2021-06-13 14:15:16.966 +03:00 [INF] Route matched with {action = "CreateEmployee", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateEmployee(EmployeeDirectory.Models.CreateEmployeeDTO) on controller EmployeeDirectory.Controllers.EmployeeController (EmployeeDirectory).
+2021-06-13 14:15:16.978 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2021-06-13 14:15:16.985 +03:00 [INF] Executed action EmployeeDirectory.Controllers.EmployeeController.CreateEmployee (EmployeeDirectory) in 19.1942ms
+2021-06-13 14:15:16.985 +03:00 [INF] Executed endpoint 'EmployeeDirectory.Controllers.EmployeeController.CreateEmployee (EmployeeDirectory)'
+2021-06-13 14:15:16.986 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44309/api/Employee application/json-patch+json 195 - 400 235 application/problem+json;+charset=utf-8 26.2221ms
+2021-06-13 14:16:50.211 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44309/api/Employee application/json-patch+json 195
+2021-06-13 14:16:50.215 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44309/api/Employee application/json-patch+json 195
+2021-06-13 14:16:50.217 +03:00 [INF] CORS policy execution successful.
+2021-06-13 14:16:50.217 +03:00 [INF] CORS policy execution successful.
+2021-06-13 14:16:50.218 +03:00 [INF] Executing endpoint 'EmployeeDirectory.Controllers.EmployeeController.CreateEmployee (EmployeeDirectory)'
+2021-06-13 14:16:50.218 +03:00 [INF] Executing endpoint 'EmployeeDirectory.Controllers.EmployeeController.CreateEmployee (EmployeeDirectory)'
+2021-06-13 14:16:50.218 +03:00 [INF] Route matched with {action = "CreateEmployee", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateEmployee(EmployeeDirectory.Models.CreateEmployeeDTO) on controller EmployeeDirectory.Controllers.EmployeeController (EmployeeDirectory).
+2021-06-13 14:16:50.220 +03:00 [INF] Route matched with {action = "CreateEmployee", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateEmployee(EmployeeDirectory.Models.CreateEmployeeDTO) on controller EmployeeDirectory.Controllers.EmployeeController (EmployeeDirectory).
+2021-06-13 14:16:50.223 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2021-06-13 14:16:50.223 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2021-06-13 14:16:50.224 +03:00 [INF] Executed action EmployeeDirectory.Controllers.EmployeeController.CreateEmployee (EmployeeDirectory) in 3.6254ms
+2021-06-13 14:16:50.224 +03:00 [INF] Executed endpoint 'EmployeeDirectory.Controllers.EmployeeController.CreateEmployee (EmployeeDirectory)'
+2021-06-13 14:16:50.224 +03:00 [INF] Executed action EmployeeDirectory.Controllers.EmployeeController.CreateEmployee (EmployeeDirectory) in 3.9103ms
+2021-06-13 14:16:50.225 +03:00 [INF] Executed endpoint 'EmployeeDirectory.Controllers.EmployeeController.CreateEmployee (EmployeeDirectory)'
+2021-06-13 14:16:50.229 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44309/api/Employee application/json-patch+json 195 - 400 235 application/problem+json;+charset=utf-8 14.5231ms
+2021-06-13 14:16:50.229 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44309/api/Employee application/json-patch+json 195 - 400 235 application/problem+json;+charset=utf-8 18.1800ms
+2021-06-13 14:19:03.422 +03:00 [INF] Application Is Starting
+2021-06-13 14:19:04.301 +03:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-06-13 14:19:04.633 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-06-13 14:19:04.634 +03:00 [INF] Hosting environment: Development
+2021-06-13 14:19:04.634 +03:00 [INF] Content root path: E:\01 DEV\Practice\EmployeeDirectory
+2021-06-13 14:19:04.681 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44309/swagger/index.html - -
+2021-06-13 14:19:04.838 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44309/swagger/index.html - - - 200 - text/html;charset=utf-8 159.0369ms
+2021-06-13 14:19:05.205 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44309/swagger/v1/swagger.json - -
+2021-06-13 14:19:05.353 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44309/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 148.0093ms
+2021-06-13 14:19:20.990 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44309/api/Employee application/json-patch+json 195
+2021-06-13 14:19:20.997 +03:00 [INF] CORS policy execution successful.
+2021-06-13 14:19:21.038 +03:00 [INF] Executing endpoint 'EmployeeDirectory.Controllers.EmployeeController.CreateEmployee (EmployeeDirectory)'
+2021-06-13 14:19:21.084 +03:00 [INF] Route matched with {action = "CreateEmployee", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateEmployee(EmployeeDirectory.Models.CreateEmployeeDTO) on controller EmployeeDirectory.Controllers.EmployeeController (EmployeeDirectory).
+2021-06-13 14:19:21.670 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2021-06-13 14:19:21.758 +03:00 [INF] Executed action EmployeeDirectory.Controllers.EmployeeController.CreateEmployee (EmployeeDirectory) in 668.7887ms
+2021-06-13 14:19:21.760 +03:00 [INF] Executed endpoint 'EmployeeDirectory.Controllers.EmployeeController.CreateEmployee (EmployeeDirectory)'
+2021-06-13 14:19:21.762 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44309/api/Employee application/json-patch+json 195 - 400 235 application/problem+json;+charset=utf-8 771.7015ms
+2021-06-13 14:19:44.818 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44309/api/Employee application/json-patch+json 200
+2021-06-13 14:19:44.821 +03:00 [INF] CORS policy execution successful.
+2021-06-13 14:19:44.823 +03:00 [INF] Executing endpoint 'EmployeeDirectory.Controllers.EmployeeController.CreateEmployee (EmployeeDirectory)'
+2021-06-13 14:19:44.824 +03:00 [INF] Route matched with {action = "CreateEmployee", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateEmployee(EmployeeDirectory.Models.CreateEmployeeDTO) on controller EmployeeDirectory.Controllers.EmployeeController (EmployeeDirectory).
+2021-06-13 14:19:45.607 +03:00 [WRN] No type was specified for the decimal property 'Salary' on entity type 'Position'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType()', specify precision and scale using 'HasPrecision()' or configure a value converter using 'HasConversion()'.
+2021-06-13 14:19:45.751 +03:00 [INF] Entity Framework Core 5.0.7 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-06-13 14:19:46.470 +03:00 [INF] Executed DbCommand (64ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (DbType = DateTime2), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Employees] ([BirthDate], [DepartmentId], [Email], [EmploymentDate], [FirstName], [LastName], [Patronymic], [Phone], [PositionId])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8);
+SELECT [Id]
+FROM [Employees]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2021-06-13 14:19:46.565 +03:00 [INF] Executing CreatedAtRouteResult, writing value of type 'EmployeeDirectory.Data.Employee'.
+2021-06-13 14:19:46.619 +03:00 [INF] Executed action EmployeeDirectory.Controllers.EmployeeController.CreateEmployee (EmployeeDirectory) in 1795.1681ms
+2021-06-13 14:19:46.620 +03:00 [INF] Executed endpoint 'EmployeeDirectory.Controllers.EmployeeController.CreateEmployee (EmployeeDirectory)'
+2021-06-13 14:19:46.625 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44309/api/Employee application/json-patch+json 200 - 201 259 application/json;+charset=utf-8 1807.7922ms
+2021-06-13 14:23:59.758 +03:00 [INF] Application Is Starting
+2021-06-13 14:24:00.647 +03:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-06-13 14:24:00.966 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-06-13 14:24:00.966 +03:00 [INF] Hosting environment: Development
+2021-06-13 14:24:00.966 +03:00 [INF] Content root path: E:\01 DEV\Practice\EmployeeDirectory
+2021-06-13 14:24:01.014 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44309/swagger/index.html - -
+2021-06-13 14:24:01.180 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44309/swagger/index.html - - - 200 - text/html;charset=utf-8 168.1130ms
+2021-06-13 14:24:01.470 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44309/swagger/v1/swagger.json - -
+2021-06-13 14:24:01.622 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44309/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 151.9772ms
+2021-06-13 14:30:53.512 +03:00 [INF] Application Is Starting
+2021-06-13 14:30:54.383 +03:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-06-13 14:30:54.707 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-06-13 14:30:54.708 +03:00 [INF] Hosting environment: Development
+2021-06-13 14:30:54.708 +03:00 [INF] Content root path: E:\01 DEV\Practice\EmployeeDirectory
+2021-06-13 14:30:54.756 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44309/swagger/index.html - -
+2021-06-13 14:30:54.928 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44309/swagger/index.html - - - 200 - text/html;charset=utf-8 174.2012ms
+2021-06-13 14:30:55.033 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44309/swagger/swagger-ui.css - -
+2021-06-13 14:30:55.056 +03:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2021-06-13 14:30:55.056 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44309/swagger/swagger-ui.css - - - 0 142933 text/css 22.9147ms
+2021-06-13 14:30:55.146 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44309/swagger/favicon-16x16.png - -
+2021-06-13 14:30:55.148 +03:00 [INF] Sending file. Request path: '/favicon-16x16.png'. Physical path: 'N/A'
+2021-06-13 14:30:55.148 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44309/swagger/favicon-16x16.png - - - 0 665 image/png 2.3416ms
+2021-06-13 14:30:55.256 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44309/swagger/v1/swagger.json - -
+2021-06-13 14:30:55.380 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44309/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 124.3187ms
+2021-06-13 18:44:53.292 +03:00 [INF] Application Is Starting
+2021-06-13 18:44:54.248 +03:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-06-13 18:44:54.583 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-06-13 18:44:54.583 +03:00 [INF] Hosting environment: Development
+2021-06-13 18:44:54.583 +03:00 [INF] Content root path: E:\01 DEV\Practice\EmployeeDirectory
+2021-06-13 18:44:54.646 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44309/swagger/index.html - -
+2021-06-13 18:44:54.806 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44309/swagger/index.html - - - 200 - text/html;charset=utf-8 161.6114ms
+2021-06-13 18:44:54.922 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44309/swagger/swagger-ui.css - -
+2021-06-13 18:44:54.947 +03:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2021-06-13 18:44:54.947 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44309/swagger/swagger-ui.css - - - 0 142933 text/css 24.8681ms
+2021-06-13 18:44:55.034 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44309/swagger/favicon-16x16.png - -
+2021-06-13 18:44:55.035 +03:00 [INF] Sending file. Request path: '/favicon-16x16.png'. Physical path: 'N/A'
+2021-06-13 18:44:55.036 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44309/swagger/favicon-16x16.png - - - 0 665 image/png 1.9590ms
+2021-06-13 18:44:55.157 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44309/swagger/v1/swagger.json - -
+2021-06-13 18:44:55.288 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44309/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 130.8652ms
+2021-06-13 18:46:21.964 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44309/api/EmployeeController/ - -
+2021-06-13 18:46:22.015 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44309/api/EmployeeController/ - - - 404 - - 51.4328ms
+2021-06-13 18:46:22.168 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44309/favicon.ico - -
+2021-06-13 18:46:22.170 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44309/favicon.ico - - - 404 - - 2.3192ms
+2021-06-13 18:46:54.305 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44309/api/EmployeeController/GetEmployee - -
+2021-06-13 18:46:54.312 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44309/api/EmployeeController/GetEmployee - - - 404 - - 6.8055ms
+2021-06-13 18:47:12.122 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44309/api/EmployeeController/Get - -
+2021-06-13 18:47:12.124 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44309/api/EmployeeController/Get - - - 404 - - 1.4188ms
+2021-06-13 18:48:04.240 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44309/api/EmployeeController - -
+2021-06-13 18:48:04.245 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44309/api/EmployeeController - - - 404 - - 4.5534ms
+2021-06-13 18:50:09.299 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44309/api/Employee - -
+2021-06-13 18:50:09.304 +03:00 [INF] Executing endpoint 'EmployeeDirectory.Controllers.EmployeeController.GetEmployee (EmployeeDirectory)'
+2021-06-13 18:50:09.345 +03:00 [INF] Route matched with {action = "GetEmployee", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetEmployee() on controller EmployeeDirectory.Controllers.EmployeeController (EmployeeDirectory).
+2021-06-13 18:50:10.523 +03:00 [WRN] No type was specified for the decimal property 'Salary' on entity type 'Position'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType()', specify precision and scale using 'HasPrecision()' or configure a value converter using 'HasConversion()'.
+2021-06-13 18:50:10.660 +03:00 [INF] Entity Framework Core 5.0.7 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-06-13 18:50:11.395 +03:00 [INF] Executed DbCommand (47ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[BirthDate], [e].[DepartmentId], [e].[Email], [e].[EmploymentDate], [e].[FirstName], [e].[LastName], [e].[Patronymic], [e].[Phone], [e].[PositionId]
+FROM [Employees] AS [e]
+2021-06-13 18:50:11.487 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[EmployeeDirectory.Models.EmployeeDTO, EmployeeDirectory, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-06-13 18:50:11.654 +03:00 [INF] Executed action EmployeeDirectory.Controllers.EmployeeController.GetEmployee (EmployeeDirectory) in 2302.0731ms
+2021-06-13 18:50:11.655 +03:00 [INF] Executed endpoint 'EmployeeDirectory.Controllers.EmployeeController.GetEmployee (EmployeeDirectory)'
+2021-06-13 18:50:11.661 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44309/api/Employee - - - 200 1135 application/json;+charset=utf-8 2362.7800ms
+2021-06-13 18:50:35.091 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:44309/api/Employee - -
+2021-06-13 18:50:35.092 +03:00 [INF] Executing endpoint 'EmployeeDirectory.Controllers.EmployeeController.GetEmployee (EmployeeDirectory)'
+2021-06-13 18:50:35.095 +03:00 [INF] Route matched with {action = "GetEmployee", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetEmployee() on controller EmployeeDirectory.Controllers.EmployeeController (EmployeeDirectory).
+2021-06-13 18:50:35.145 +03:00 [INF] Entity Framework Core 5.0.7 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-06-13 18:50:35.155 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[BirthDate], [e].[DepartmentId], [e].[Email], [e].[EmploymentDate], [e].[FirstName], [e].[LastName], [e].[Patronymic], [e].[Phone], [e].[PositionId]
+FROM [Employees] AS [e]
+2021-06-13 18:50:35.156 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[EmployeeDirectory.Models.EmployeeDTO, EmployeeDirectory, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-06-13 18:50:35.157 +03:00 [INF] Executed action EmployeeDirectory.Controllers.EmployeeController.GetEmployee (EmployeeDirectory) in 61.9487ms
+2021-06-13 18:50:35.158 +03:00 [INF] Executed endpoint 'EmployeeDirectory.Controllers.EmployeeController.GetEmployee (EmployeeDirectory)'
+2021-06-13 18:50:35.161 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:44309/api/Employee - - - 200 1135 application/json;+charset=utf-8 69.9318ms
+2021-06-13 18:51:28.464 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44309/api/Employee/1 - -
+2021-06-13 18:51:28.467 +03:00 [INF] Executing endpoint 'EmployeeDirectory.Controllers.EmployeeController.GetEmployee (EmployeeDirectory)'
+2021-06-13 18:51:28.489 +03:00 [INF] Route matched with {action = "GetEmployee", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetEmployee(Int32) on controller EmployeeDirectory.Controllers.EmployeeController (EmployeeDirectory).
+2021-06-13 18:51:28.519 +03:00 [INF] Entity Framework Core 5.0.7 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-06-13 18:51:28.709 +03:00 [INF] Executed DbCommand (27ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[BirthDate], [e].[DepartmentId], [e].[Email], [e].[EmploymentDate], [e].[FirstName], [e].[LastName], [e].[Patronymic], [e].[Phone], [e].[PositionId], [p].[Id], [p].[Name], [p].[Salary], [d].[Id], [d].[Name]
+FROM [Employees] AS [e]
+INNER JOIN [Positions] AS [p] ON [e].[PositionId] = [p].[Id]
+INNER JOIN [Departments] AS [d] ON [e].[DepartmentId] = [d].[Id]
+WHERE [e].[Id] = @__id_0
+2021-06-13 18:51:28.736 +03:00 [INF] Executing OkObjectResult, writing value of type 'EmployeeDirectory.Models.EmployeeDTO'.
+2021-06-13 18:51:28.742 +03:00 [INF] Executed action EmployeeDirectory.Controllers.EmployeeController.GetEmployee (EmployeeDirectory) in 252.1318ms
+2021-06-13 18:51:28.742 +03:00 [INF] Executed endpoint 'EmployeeDirectory.Controllers.EmployeeController.GetEmployee (EmployeeDirectory)'
+2021-06-13 18:51:28.742 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44309/api/Employee/1 - - - 200 403 application/json;+charset=utf-8 278.4574ms
+2021-06-13 18:51:49.417 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:44309/api/Employee/1 - -
+2021-06-13 18:51:49.418 +03:00 [INF] Executing endpoint 'EmployeeDirectory.Controllers.EmployeeController.GetEmployee (EmployeeDirectory)'
+2021-06-13 18:51:49.418 +03:00 [INF] Route matched with {action = "GetEmployee", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetEmployee(Int32) on controller EmployeeDirectory.Controllers.EmployeeController (EmployeeDirectory).
+2021-06-13 18:51:49.422 +03:00 [INF] Entity Framework Core 5.0.7 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-06-13 18:51:49.432 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[BirthDate], [e].[DepartmentId], [e].[Email], [e].[EmploymentDate], [e].[FirstName], [e].[LastName], [e].[Patronymic], [e].[Phone], [e].[PositionId], [p].[Id], [p].[Name], [p].[Salary], [d].[Id], [d].[Name]
+FROM [Employees] AS [e]
+INNER JOIN [Positions] AS [p] ON [e].[PositionId] = [p].[Id]
+INNER JOIN [Departments] AS [d] ON [e].[DepartmentId] = [d].[Id]
+WHERE [e].[Id] = @__id_0
+2021-06-13 18:51:49.433 +03:00 [INF] Executing OkObjectResult, writing value of type 'EmployeeDirectory.Models.EmployeeDTO'.
+2021-06-13 18:51:49.434 +03:00 [INF] Executed action EmployeeDirectory.Controllers.EmployeeController.GetEmployee (EmployeeDirectory) in 13.0733ms
+2021-06-13 18:51:49.434 +03:00 [INF] Executed endpoint 'EmployeeDirectory.Controllers.EmployeeController.GetEmployee (EmployeeDirectory)'
+2021-06-13 18:51:49.434 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:44309/api/Employee/1 - - - 200 403 application/json;+charset=utf-8 16.8595ms
+2021-06-13 19:08:41.605 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44309/api/Employee - -
+2021-06-13 19:08:41.607 +03:00 [INF] Executing endpoint 'EmployeeDirectory.Controllers.EmployeeController.GetEmployee (EmployeeDirectory)'
+2021-06-13 19:08:41.610 +03:00 [INF] Route matched with {action = "GetEmployee", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetEmployee() on controller EmployeeDirectory.Controllers.EmployeeController (EmployeeDirectory).
+2021-06-13 19:08:41.611 +03:00 [INF] Entity Framework Core 5.0.7 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-06-13 19:08:41.631 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[BirthDate], [e].[DepartmentId], [e].[Email], [e].[EmploymentDate], [e].[FirstName], [e].[LastName], [e].[Patronymic], [e].[Phone], [e].[PositionId]
+FROM [Employees] AS [e]
+2021-06-13 19:08:41.632 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[EmployeeDirectory.Models.EmployeeDTO, EmployeeDirectory, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-06-13 19:08:41.632 +03:00 [INF] Executed action EmployeeDirectory.Controllers.EmployeeController.GetEmployee (EmployeeDirectory) in 22.649ms
+2021-06-13 19:08:41.632 +03:00 [INF] Executed endpoint 'EmployeeDirectory.Controllers.EmployeeController.GetEmployee (EmployeeDirectory)'
+2021-06-13 19:08:41.636 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44309/api/Employee - - - 200 1135 application/json;+charset=utf-8 30.7632ms

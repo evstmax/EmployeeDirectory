@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
+using EmployeeDirectory.Data;
 using EmployeeDirectory.IRepository;
 using EmployeeDirectory.Models;
 using Microsoft.AspNetCore.Http;
@@ -27,6 +28,8 @@ namespace EmployeeDirectory.Controllers
             _mapper = mapper;
         }
         [HttpGet]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> GetEmployee()
         {
             try
@@ -43,7 +46,9 @@ namespace EmployeeDirectory.Controllers
         }
 
 
-        [HttpGet("{id:int}")]
+        [HttpGet("{id:int}", Name = "GetEmployee")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> GetEmployee(int id)
         {
             try
@@ -59,6 +64,45 @@ namespace EmployeeDirectory.Controllers
             }
         }
 
+
+
+
+
+
+        [HttpPost]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status201Created)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        public async Task<IActionResult> CreateEmployee([FromBody] CreateEmployeeDTO employeeDTO)
+        {
+            if (!ModelState.IsValid)
+            {
+                _logger.LogError($"Invalid POST attempt in {nameof(CreateEmployee)}");
+                return BadRequest(ModelState);
+            }
+
+            try
+            {
+                var employee = _mapper.Map<Employee>(employeeDTO);
+                await _unitOfWork.Employees.Insert(employee);
+                await _unitOfWork.Save();
+
+                return CreatedAtRoute("GetEmployee", new { id = employee.Id }, employee);
+
+            }
+            catch (Exception e)
+            {
+                _logger.LogError(e, $"Something Went Wrong in the {nameof(CreateEmployee)}");
+                return StatusCode(500, "Internal Server Error. Please Try Again Later");
+            }
+
+
+            //var employee = _mapper.Map<Employee>(employeeDTO);
+            //await _unitOfWork.Employees.Insert(employee);
+            //await _unitOfWork.Save();
+
+            //return CreatedAtRoute("GetEmployee", new { id = employee.Id }, employee);
+        }
 
 
 

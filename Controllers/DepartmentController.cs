@@ -28,6 +28,8 @@ namespace EmployeeDirectory.Controllers
         }
 
         [HttpGet]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> GetDepartment()
         {
             try
@@ -45,6 +47,8 @@ namespace EmployeeDirectory.Controllers
 
 
         [HttpGet("{id:int}")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> GetDepartment(int id)
         {
             try

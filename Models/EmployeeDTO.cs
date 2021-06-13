@@ -7,7 +7,6 @@ namespace EmployeeDirectory.Models
 {
     public class CreateEmployeeDTO
     {
-//        public int Id { get; set; }
         [Required]
         public string FirstName { get; set; }
 
