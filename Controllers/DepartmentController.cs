@@ -41,10 +41,6 @@ namespace EmployeeDirectory.Controllers
                 _logger.LogError(e, $"Something Went Wrong in the {nameof(GetDepartment)}");
                 return StatusCode(500, "Internal Server Error. Please Try Again Later");
             }
-
-
-
-
         }
 
 

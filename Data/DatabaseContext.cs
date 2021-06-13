@@ -53,7 +53,7 @@ namespace EmployeeDirectory.Data
             new Position
                 {
                     Id = 3,
-                    Name = "Бугалтер",
+                    Name = "Бухгалтер",
                     Salary = 40000
                 }
             );
