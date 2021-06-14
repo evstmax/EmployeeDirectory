@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EmployeeDirectory.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    [Migration("20210612070553_Seeding")]
-    partial class Seeding
+    [Migration("20210614201822_Initial")]
+    partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -29,7 +29,6 @@ namespace EmployeeDirectory.Migrations
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("Name")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -40,7 +39,7 @@ namespace EmployeeDirectory.Migrations
                         new
                         {
                             Id = 1,
-                            Name = "Бугалтерия"
+                            Name = "Бухгалтерия"
                         },
                         new
                         {
@@ -68,26 +67,21 @@ namespace EmployeeDirectory.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("Email")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("EmploymentDate")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("FirstName")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("LastName")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Patronymic")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Phone")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("PositionId")
@@ -105,10 +99,10 @@ namespace EmployeeDirectory.Migrations
                         new
                         {
                             Id = 1,
-                            BirthDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified).AddTicks(330),
+                            BirthDate = new DateTime(1985, 2, 3, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DepartmentId = 2,
                             Email = "ivan@mail.ru",
-                            EmploymentDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified).AddTicks(333),
+                            EmploymentDate = new DateTime(2000, 2, 3, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             FirstName = "Иван",
                             LastName = "Иванов",
                             Patronymic = "Иванович",
@@ -118,14 +112,14 @@ namespace EmployeeDirectory.Migrations
                         new
                         {
                             Id = 2,
-                            BirthDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified).AddTicks(330),
+                            BirthDate = new DateTime(1985, 2, 3, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DepartmentId = 3,
-                            Email = "ivan@mail.ru",
-                            EmploymentDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified).AddTicks(333),
+                            Email = "evg@mail.ru",
+                            EmploymentDate = new DateTime(2000, 2, 3, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             FirstName = "Евгений",
                             LastName = "Соловьев",
                             Patronymic = "Генадьевич",
-                            Phone = "89085149822",
+                            Phone = "89085949822",
                             PositionId = 2
                         });
                 });
@@ -138,7 +132,6 @@ namespace EmployeeDirectory.Migrations
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("Name")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<decimal>("Salary")
@@ -164,7 +157,7 @@ namespace EmployeeDirectory.Migrations
                         new
                         {
                             Id = 3,
-                            Name = "Бугалтер",
+                            Name = "Бухгалтер",
                             Salary = 40000m
                         });
                 });
@@ -172,13 +165,13 @@ namespace EmployeeDirectory.Migrations
             modelBuilder.Entity("EmployeeDirectory.Data.Employee", b =>
                 {
                     b.HasOne("EmployeeDirectory.Data.Department", "Department")
-                        .WithMany()
+                        .WithMany("Employees")
                         .HasForeignKey("DepartmentId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("EmployeeDirectory.Data.Position", "Position")
-                        .WithMany()
+                        .WithMany("Employees")
                         .HasForeignKey("PositionId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -186,6 +179,16 @@ namespace EmployeeDirectory.Migrations
                     b.Navigation("Department");
 
                     b.Navigation("Position");
+                });
+
+            modelBuilder.Entity("EmployeeDirectory.Data.Department", b =>
+                {
+                    b.Navigation("Employees");
+                });
+
+            modelBuilder.Entity("EmployeeDirectory.Data.Position", b =>
+                {
+                    b.Navigation("Employees");
                 });
 #pragma warning restore 612, 618
         }

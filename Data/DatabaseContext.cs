@@ -65,8 +65,8 @@ namespace EmployeeDirectory.Data
                     FirstName = "Иван",
                     LastName = "Иванов",
                     Patronymic = "Иванович",
-                    BirthDate = new DateTime(1985/02/03),
-                    EmploymentDate = new DateTime(2000 / 02 / 03),
+                    BirthDate = new DateTime(1985,02,03),
+                    EmploymentDate = new DateTime(2000 , 02 , 03),
                     PositionId = 1,
                     //Position = null,
                     DepartmentId = 2,
@@ -80,14 +80,14 @@ namespace EmployeeDirectory.Data
                     FirstName = "Евгений",
                     LastName = "Соловьев",
                     Patronymic = "Генадьевич",
-                    BirthDate = new DateTime(1985 / 02 / 03),
-                    EmploymentDate = new DateTime(2000 / 02 / 03),
+                    BirthDate = new DateTime(1985 , 02 , 03),
+                    EmploymentDate = new DateTime(2000 , 02 , 03),
                     PositionId = 2,
                     //Position = null,
                     DepartmentId = 3,
                     //Department = null,
-                    Email = "ivan@mail.ru",
-                    Phone = "89085149822"
+                    Email = "evg@mail.ru",
+                    Phone = "89085949822"
                 }
                 
 
