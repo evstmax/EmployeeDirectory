@@ -16,6 +16,8 @@ namespace EmployeeDirectory.Data
 
         public DateTime EmploymentDate { get; set; }
 
+        public bool Dismissed { get; set; }
+
 
         [ForeignKey(nameof(Position))]
         public int PositionId { get; set; }

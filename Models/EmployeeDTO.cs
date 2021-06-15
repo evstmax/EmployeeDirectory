@@ -46,7 +46,7 @@ namespace EmployeeDirectory.Models
         [Phone(ErrorMessage = "Invalid phone number")]
         public string Phone { get; set; }
 
-
+        public bool Dismissed { get; set; }
 
     }
 

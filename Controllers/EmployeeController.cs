@@ -121,5 +121,37 @@ namespace EmployeeDirectory.Controllers
 
         }
 
+
+        [HttpPut("{id:int}")]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        public async Task<IActionResult> UpdateEmployee(int id, [FromBody] UpdateEmployeeDTO employeeDTO)
+        {
+            if (!ModelState.IsValid || id < 1)
+            {
+                _logger.LogError($"Invalid UPDATE attempt in {nameof(UpdateEmployee)}");
+                return BadRequest(ModelState);
+            }
+
+
+            var employee= await _unitOfWork.Employees.Get(q => q.Id == id);
+            if (employee == null)
+            {
+                _logger.LogError($"Invalid UPDATE attempt in {nameof(UpdateEmployee)}");
+                return BadRequest("Submitted data is invalid");
+            }
+
+            _mapper.Map(employeeDTO, employee);
+            _unitOfWork.Employees.Update(employee);
+            await _unitOfWork.Save();
+
+            return NoContent();
+
+        }
+
+
+
+
     }
 }
